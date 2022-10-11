@@ -1,0 +1,13 @@
+--- Makefile	2022-10-11 11:12:57.413914644 +0300
++++ Makefile-patched	2022-10-11 11:11:57.274492226 +0300
+@@ -7,8 +7,8 @@
+ CC = cc
+ LD = cc
+ 
+-LDFLAGS =  -fstack-protector-strong -L/usr/local/lib
+-CLDFLAGS =  -fstack-protector-strong -L/usr/local/lib
++LDFLAGS = -static-pie -fstack-protector-strong -L/usr/local/lib
++CLDFLAGS = -static-pie -fstack-protector-strong -L/usr/local/lib
+ 
+ mallocsrc = 
+ mallocobj = 
